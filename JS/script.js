@@ -3,7 +3,8 @@ var cardNumbers = document.querySelector(".items_number");
 var totalPriceOut =document.querySelector(".out_div");
 var totalnumber = 0 ;
 var totalPrice = 0 ;
-var test = document.querySelector(".me")
+const toastLiveExample = document.getElementById('liveToast')
+
 buttons.forEach(function (button) { 
     button.addEventListener("click", function (){
         totalPrice += +(button.getAttribute("price")) ;
@@ -15,6 +16,7 @@ buttons.forEach(function (button) {
         }
         document.querySelector(el+" .count").innerHTML = +(document.querySelector(el+" .count").innerHTML)+1;
         document.querySelector(el+" .total").innerHTML = +(document.querySelector(el+" .count").innerHTML) * +(document.querySelector(el+" .price").innerHTML);
-        test.innerHTML += totalPrice + "<br />" 
+        const toast = new bootstrap.Toast(toastLiveExample)
+        toast.show()
     });
 })
