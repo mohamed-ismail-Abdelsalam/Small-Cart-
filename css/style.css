@@ -6,7 +6,7 @@
 }
 
 .offcanvas.offcanvas-start {
-    width: 350px;
+    width: 400px;
 }
 .element_{
     display: none;
@@ -19,4 +19,10 @@
 }
 .card:hover img{
     transform: scale(1.1,1.1);
+}
+
+td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
